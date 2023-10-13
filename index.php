@@ -9,15 +9,44 @@
 
 <body>
 
+    <ul>
+        <li>Host: <?php echo $_SERVER['HTTP_HOST'] ?></li>
+        <li>Server Name: <?php echo $_SERVER['SERVER_NAME'] ?></li>
+        <li>Document Root: <?php echo $_SERVER['DOCUMENT_ROOT'] ?></li>
+        <!-- CLIENT INFO -->
+        <li>Client IP: <?php echo $_SERVER['REMOTE_ADDR'] ?></li>
+        <li>Client Port: <?php echo $_SERVER['REMOTE_PORT'] ?></li>
+        <li>Client info: <?php echo $_SERVER['HTTP_USER_AGENT'] ?></li>
+    </ul>
 
-    <?php
+    
+    
+  <?php
+
+    // Superglobales
+
+    // $_GET
+    // $_POST
+    // $_REQUEST
+    // $_SESSION
+    // $_COOKIE
+    // $_SERVER
+    // $_ENV
+    // $_FILES
+
+
+
+
+
+
+
+
 // $y = 10;
 
+    // const FRUITS = ['apple', 'orange', 'banana'];
 
-    const FRUITS = ['apple', 'orange', 'banana'];
-
-    $newFruits = array_map(fn($fruit) => "$fruit<br/>", FRUITS);
-    echo implode('', $newFruits);
+    // $newFruits = array_map(fn($fruit) => "$fruit<br/>", FRUITS);
+    // echo implode('', $newFruits);
  
     // echo count(FRUITS);
     // var_dump((in_array('apple', FRUITS)));
@@ -58,8 +87,11 @@
 
 
 
+    ?>
 
 
+
+<?php
     // comentario
 
     // echo "<h1>Welcome</h1>";
