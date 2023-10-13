@@ -8,20 +8,39 @@
 </head>
 
 <body>
-
+    <!-- 
     <ul>
         <li>Host: <?php echo $_SERVER['HTTP_HOST'] ?></li>
         <li>Server Name: <?php echo $_SERVER['SERVER_NAME'] ?></li>
         <li>Document Root: <?php echo $_SERVER['DOCUMENT_ROOT'] ?></li>
-        <!-- CLIENT INFO -->
+
         <li>Client IP: <?php echo $_SERVER['REMOTE_ADDR'] ?></li>
         <li>Client Port: <?php echo $_SERVER['REMOTE_PORT'] ?></li>
         <li>Client info: <?php echo $_SERVER['HTTP_USER_AGENT'] ?></li>
-    </ul>
+    </ul> -->
 
-    
-    
-  <?php
+
+
+    <a href="<?php echo $_SERVER['PHP_SELF']; ?>?name=pepe">About</a>
+
+    <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" />
+        </div>
+        <div>
+            <label for="age">Age: </label>
+            <input type="number" id="age" name="age" />
+        </div>
+        <input type="submit" value="Send" name="submit" />
+    </form>
+
+
+    <?php
+    if (isset($_POST['submit'])) {
+        echo $_POST['name'];
+        echo $_POST['age'];
+    }
 
     // Superglobales
 
@@ -41,18 +60,18 @@
 
 
 
-// $y = 10;
+    // $y = 10;
 
     // const FRUITS = ['apple', 'orange', 'banana'];
 
     // $newFruits = array_map(fn($fruit) => "$fruit<br/>", FRUITS);
     // echo implode('', $newFruits);
- 
+
     // echo count(FRUITS);
     // var_dump((in_array('apple', FRUITS)));
-    
+
     // print_r(FRUITS);
-    
+
 
     // function printer() {
     //     global $y;
@@ -91,7 +110,7 @@
 
 
 
-<?php
+    <?php
     // comentario
 
     // echo "<h1>Welcome</h1>";
@@ -163,21 +182,21 @@
     //     $json = file_get_contents($url);
     //     $data = json_decode($json, true);
 
-        // for ($i = 0; $i < $cantidad; $i++) {
-        //     echo "<h1>Hola</h1>";
-        // }
+    // for ($i = 0; $i < $cantidad; $i++) {
+    //     echo "<h1>Hola</h1>";
+    // }
 
-        // $x = 1;
-        // do {
-        //     echo "<h1>Hola</h1>";
-        //     $x++;
-        // } while ($x <= 10);
+    // $x = 1;
+    // do {
+    //     echo "<h1>Hola</h1>";
+    //     $x++;
+    // } while ($x <= 10);
 
-        // foreach ($data as $todo) {
-        // echo "<h1>".$todo['title']."</h1>";
-        // }
+    // foreach ($data as $todo) {
+    // echo "<h1>".$todo['title']."</h1>";
+    // }
 
-        /*  switch ($_GET['cantidad']) {
+    /*  switch ($_GET['cantidad']) {
                 case 10:
                     echo "<h1>".$data['title']."</h1>";
                     break;
@@ -190,10 +209,10 @@
             } */
 
 
-        // $id = $data['id']; 
-        // $userId = $data['userId'];
-        // $title = $data['title'];
-        // $completed = $data['completed'] ? 'yes' : 'no';
+    // $id = $data['id']; 
+    // $userId = $data['userId'];
+    // $title = $data['title'];
+    // $completed = $data['completed'] ? 'yes' : 'no';
 
     // }
 
